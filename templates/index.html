@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>DjangoCMS主页</title>
+</head>
+<body>
+    <h1>DjangoCMS主页</h1>
+    <hr>
+    <h3>填写表单</h3>
+    <form method="post" action="{% url "index" %}">
+        <input type="text" placeholder="姓名" name="username">
+        <input type="password" placeholder="密码" name="password">
+        <input type="submit"value="提交">
+        {%csrf_token%}
+    </form>
+    <br>
+    <br>
+    <form method="post" action="{% url "delete" %}">
+        <input type="text" placeholder="姓名" name="username">
+        <input type="password" placeholder="密码" name="password">
+        <input type="submit"value="删除">
+        {%csrf_token%}
+    </form>
+    <a href="{% url 'list' %}">返回用户列表页</a>
+    <br>
+    <br>
+    <a href="{% url 'welcome'%}">返回欢迎页</a>
+</body>
+</html>

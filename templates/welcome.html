@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}welcome欢迎{% endblock %}</title>
+</head>
+<body>
+    <h1>{% block h1 %}欢迎你的访问{% endblock %}</h1>
+    <h1>------------------------------------------------</h1>
+    <p>现在时间是{{ nowtime }}点击以下链接，可以进入djangoCMS主页</p>
+    <a href="{% url 'index'%}">DjangoCMS主页</a>
+</body>
+</html>

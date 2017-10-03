@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息列表</title>
+</head>
+<body>
+    <h1>访问本网站的用户名:</h1>
+    <hr>
+    {%for user in all_user%}
+    <p>{{ user.username | slice:"5"}}</p>
+    <p>小明</p>
+    {% endfor %}
+    <br>
+    <a href="{% url 'index' %}">返回DjangoCMS主页</a>
+    <br>
+    <br>
+    <a href="{% url 'logout' %}">退出页面</a>
+</body>
+</html>
